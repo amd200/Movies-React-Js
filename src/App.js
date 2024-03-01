@@ -1,24 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Header from "./components/Header/Header";
+import Hero from "./pages/Hero";
+import Film from "./pages/Film";
+import "./App.css";
+import { useEffect, useState } from "react";
+import axios from "axios";
+import Footer from "./components/Footer/Footer";
+import { useDispatch, useSelector } from "react-redux";
 
 function App() {
+  const [totalPages, setTotalPages] = useState(500);
+
+  //to search in api
+  const search = async (word) => {
+    if (word === "") {
+    } else {
+      const res = await axios.get(``);
+      // setFilms(res.data.results);
+      setTotalPages(res.data.total_pages);
+    }
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Header search={search} />
+      <Routes>
+        <Route path="/" element={<Hero totalPages={totalPages} />} />
+        <Route path="/film" element={<Film />} />
+      </Routes>
+      <Footer />
+    </BrowserRouter>
   );
 }
 

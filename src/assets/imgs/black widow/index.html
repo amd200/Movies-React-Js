@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css"
+    />
+    <script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>
+
+    <link rel="stylesheet" href="style.css" />
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <title>Movierocket</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light p-3">
+      <div class="container">
+        <a class="navbar-brand" href="../index.html">
+          <img src="logo624.png" width="180" height="30" alt="" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link px-4" aria-current="page" href="#">Catalog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-4" href="#">Pricing plans</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-4" href="#">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-4" href="#">Contact</a>
+            </li>
+          </ul>
+          <form action="" class="d-felx align-items-center">
+            <div class="input-group parent d-felx align-items-center">
+              <input
+                placeholder="I'm looking for..."
+                type="text"
+                class="form-control input border-0"
+                name=""
+                id=""
+              />
+              <svg
+                class="search"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M21.71,20.29,18,16.61A9,9,0,1,0,16.61,18l3.68,3.68a1,1,0,0,0,1.42,0A1,1,0,0,0,21.71,20.29ZM11,18a7,7,0,1,1,7-7A7,7,0,0,1,11,18Z"
+                ></path>
+              </svg>
+            </div>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <div class="banner">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-xl-8">
+            <div class="content">
+              <div class="tailer d-flex align-items-end">
+                <a
+                  href="#"
+                  class="d-flex align-items-end text-white"
+                  data-bs-toggle="modal"
+                  data-bs-target="#exampleModal"
+                >
+                  <i class="bi bi-play-circle"></i>
+                  <p>Trailer</p>
+                </a>
+              </div>
+              <div class="text">
+                <h3 class="fw-normal">Mortal</h3>
+                <ul class="d-flex p-0 align-items-center">
+                  <li class="nav-item">
+                    <i
+                      class="bi bi-star me-1"
+                      style="color: #2f80ed; font-size: 20px"
+                    ></i
+                    >9.0
+                  </li>
+                  <li class="nav-item">Action, Adventure, Drama</li>
+                  <li class="nav-item">2020</li>
+                  <li class="nav-item">1h 44min</li>
+                  <li class="nav-item">16+</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <video
+     class="m-auto d-flex"
+    controls
+      src="https://enc109.vidboo.org:189/6jmnv5x5wuazsalriwlqh67vl4s5567s6gkdlxwd7p3g7kdg5qi56gbdmzmq/v.mp4"
+      
+    ></video>
+    <!-- <div class="video">
+      <div class="container">
+        <div id="video_player">
+          <div class="jw-media jw-reset"></div>
+
+          <div class="progressAreaTime">0:00</div>
+          <div class="controls active">
+            <div class="progress-area">
+              <div class="progress-bar">
+                <span></span>
+              </div>
+            </div>
+            <div class="controls-list">
+              <div class="controls-left">
+                <span class="icon">
+                  <i class="material-icons fast-rewind">replay_10</i>
+                </span>
+                <span class="icon">
+                  <i class="material-icons play_pause">play_arrow</i>
+                </span>
+                <span class="icon">
+                  <i class="material-icons fast-forward">forward_10</i>
+                </span>
+                <span class="icon">
+                  <i class="material-icons volume">volume_up</i>
+                  <input type="range" min="0" max="100" class="volume_range" />
+                </span>
+                <div class="timer">
+                  <span class="current">0:00</span> /
+                  <span class="duration">0 : 27</span>
+                </div>
+              </div>
+              <div class="controls-right">
+                <span class="icon">
+                  <i class="material-icons auto-play"></i>
+                </span>
+                <span class="icon">
+                  <i class="material-icons settingsBtn">settings</i>
+                </span>
+                <span class="icon">
+                  <i class="material-icons picture_in_picutre"
+                    >picture_in_picture_alt</i
+                  >
+                </span>
+                <span class="icon">
+                  <i class="material-icons fullscreen">fullscreen</i>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div id="settings">
+            <div class="playback">
+              <span>Playback Speed</span>
+              <ul>
+                <li data-speed="0.25">0.25</li>
+                <li data-speed="0.5">0.5</li>
+                <li data-speed="0.75">0.75</li>
+                <li data-speed="1" class="active">Normal</li>
+                <li data-speed="1.25">1.25</li>
+                <li data-speed="1.5">1.5</li>
+                <li data-speed="1.75">1.75</li>
+                <li data-speed="2">2</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> -->
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Trailer</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/IDMIIWdzE0s"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 col-md-5">
+            <div class="left">
+              <img
+                class="mb-2"
+                src="https://movierocket.000webhostapp.com/img/logo624.png"
+                width="200"
+                height="30"
+                alt=""
+              />
+              <p class="text-white">
+                Movies & TV Shows, Online cinema <br />
+                Movie database PHP Template.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4">
+            <div class="frist">
+              <h6 class="text-white">Movierocket</h6>
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a href="#" class="nav-link p-0">About Us</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link p-0">Contact Us</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="second">
+              <h6 class="text-white">Browse</h6>
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a href="#" class="nav-link p-0">Tv</a>
+                </li>
+
+                <li class="nav-item">
+                  <a href="#" class="nav-link p-0">Movies</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-4">
+            <div class="third">
+              <h6 class="text-white">Help</h6>
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a href="#" class="nav-link p-0">Plans & Pricing</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link p-0">Privacy policy</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="revsred">
+          <p>© Movierocket, 2022 : All Rights Reserved</p>
+          <p>Developed by Ahmed Mohamed.</p>
+        </div>
+      </div>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+      // let's select all required tags or elements
+      const video_player = document.querySelector("#video_player"),
+        mainVideo = video_player.querySelector("#main-video"),
+        progressAreaTime = video_player.querySelector(".progressAreaTime"),
+        controls = video_player.querySelector(".controls"),
+        progressArea = video_player.querySelector(".progress-area"),
+        progress_Bar = video_player.querySelector(".progress-bar"),
+        fast_rewind = video_player.querySelector(".fast-rewind"),
+        play_pause = video_player.querySelector(".play_pause"),
+        fast_forward = video_player.querySelector(".fast-forward"),
+        volume = video_player.querySelector(".volume"),
+        volume_range = video_player.querySelector(".volume_range"),
+        current = video_player.querySelector(".current"),
+        totalDuration = video_player.querySelector(".duration"),
+        auto_play = video_player.querySelector(".auto-play"),
+        settingsBtn = video_player.querySelector(".settingsBtn"),
+        picture_in_picutre = video_player.querySelector(".picture_in_picutre"),
+        fullscreen = video_player.querySelector(".fullscreen"),
+        settings = video_player.querySelector("#settings"),
+        playback = video_player.querySelectorAll(".playback li");
+
+      // Play video function
+      function playVideo() {
+        play_pause.innerHTML = "pause";
+        play_pause.title = "pause";
+        video_player.classList.add("paused");
+        mainVideo.play();
+      }
+
+      // Pause video function
+      function pauseVideo() {
+        play_pause.innerHTML = "play_arrow";
+        play_pause.title = "play";
+        video_player.classList.remove("paused");
+        mainVideo.pause();
+      }
+
+      play_pause.addEventListener("click", () => {
+        const isVideoPaused = video_player.classList.contains("paused");
+        isVideoPaused ? pauseVideo() : playVideo();
+      });
+
+      mainVideo.addEventListener("play", () => {
+        playVideo();
+      });
+
+      mainVideo.addEventListener("pause", () => {
+        pauseVideo();
+      });
+
+      // fast_rewind video function
+      fast_rewind.addEventListener("click", () => {
+        mainVideo.currentTime -= 10;
+      });
+
+      // fast_forward video function
+      fast_forward.addEventListener("click", () => {
+        mainVideo.currentTime += 10;
+      });
+
+      // Load video duration
+      mainVideo.addEventListener("loadeddata", (e) => {
+        let videoDuration = e.target.duration;
+        let totalMin = Math.floor(videoDuration / 60);
+        let totalSec = Math.floor(videoDuration % 60);
+
+        // if seconds are less then 10 then add 0 at the begning
+        totalSec < 10 ? (totalSec = "0" + totalSec) : totalSec;
+        totalDuration.innerHTML = `${totalMin} : ${totalSec}`;
+      });
+
+      // Current video duration
+      mainVideo.addEventListener("timeupdate", (e) => {
+        let currentVideoTime = e.target.currentTime;
+        let currentMin = Math.floor(currentVideoTime / 60);
+        let currentSec = Math.floor(currentVideoTime % 60);
+        // if seconds are less then 10 then add 0 at the begning
+        currentSec < 10 ? (currentSec = "0" + currentSec) : currentSec;
+        current.innerHTML = `${currentMin} : ${currentSec}`;
+
+        let videoDuration = e.target.duration;
+        // progressBar width change
+        let progressWidth = (currentVideoTime / videoDuration) * 100;
+        progress_Bar.style.width = `${progressWidth}%`;
+      });
+
+      // let's update playing video current time on according to the progress bar width
+
+      progressArea.addEventListener("click", (e) => {
+        let videoDuration = mainVideo.duration;
+        let progressWidthval = progressArea.clientWidth;
+        let ClickOffsetX = e.offsetX;
+        mainVideo.currentTime =
+          (ClickOffsetX / progressWidthval) * videoDuration;
+      });
+
+      // change volume
+      function changeVolume() {
+        mainVideo.volume = volume_range.value / 100;
+        if (volume_range.value == 0) {
+          volume.innerHTML = "volume_off";
+        } else if (volume_range.value < 40) {
+          volume.innerHTML = "volume_down";
+        } else {
+          volume.innerHTML = "volume_up";
+        }
+      }
+
+      function muteVolume() {
+        if (volume_range.value == 0) {
+          volume_range.value = 80;
+          mainVideo.volume = 0.8;
+          volume.innerHTML = "volume_up";
+        } else {
+          volume_range.value = 0;
+          mainVideo.volume = 0;
+          volume.innerHTML = "volume_off";
+        }
+      }
+
+      volume_range.addEventListener("change", () => {
+        changeVolume();
+      });
+
+      volume.addEventListener("click", () => {
+        muteVolume();
+      });
+
+      // Update progress area time and display block on mouse move
+      progressArea.addEventListener("mousemove", (e) => {
+        let progressWidthval = progressArea.clientWidth;
+        let x = e.offsetX;
+        progressAreaTime.style.setProperty("--x", `${x}px`);
+        progressAreaTime.style.display = "block";
+        let videoDuration = mainVideo.duration;
+        let progressTime = Math.floor((x / progressWidthval) * videoDuration);
+        let currentMin = Math.floor(progressTime / 60);
+        let currentSec = Math.floor(progressTime % 60);
+        // if seconds are less then 10 then add 0 at the begning
+        currentSec < 10 ? (currentSec = "0" + currentSec) : currentSec;
+        progressAreaTime.innerHTML = `${currentMin} : ${currentSec}`;
+      });
+
+      progressArea.addEventListener("mouseleave", () => {
+        progressAreaTime.style.display = "none";
+      });
+
+      // Auto play
+      auto_play.addEventListener("click", () => {
+        auto_play.classList.toggle("active");
+        if (auto_play.classList.contains("active")) {
+          auto_play.title = "Autoplay is on";
+        } else {
+          auto_play.title = "Autoplay is off";
+        }
+      });
+
+      mainVideo.addEventListener("ended", () => {
+        if (auto_play.classList.contains("active")) {
+          playVideo();
+        } else {
+          play_pause.innerHTML = "replay";
+          play_pause.title = "Replay";
+        }
+      });
+
+      // Picture in picture
+
+      picture_in_picutre.addEventListener("click", () => {
+        mainVideo.requestPictureInPicture();
+      });
+
+      // Full screen function
+
+      fullscreen.addEventListener("click", () => {
+        if (!video_player.classList.contains("openFullScreen")) {
+          video_player.classList.add("openFullScreen");
+          fullscreen.innerHTML = "fullscreen_exit";
+          video_player.requestFullscreen();
+        } else {
+          video_player.classList.remove("openFullScreen");
+          fullscreen.innerHTML = "fullscreen";
+          document.exitFullscreen();
+        }
+      });
+
+      // Open settings
+      settingsBtn.addEventListener("click", () => {
+        settings.classList.toggle("active");
+        settingsBtn.classList.toggle("active");
+      });
+
+      // Playback Rate
+
+      playback.forEach((event) => {
+        event.addEventListener("click", () => {
+          removeActiveClasses();
+          event.classList.add("active");
+          let speed = event.getAttribute("data-speed");
+          mainVideo.playbackRate = speed;
+        });
+      });
+
+      function removeActiveClasses() {
+        playback.forEach((event) => {
+          event.classList.remove("active");
+        });
+      }
+
+      // Store video duration and video path in local storage
+
+      window.addEventListener("unload", () => {
+        let setDuration = localStorage.setItem(
+          "duration",
+          `${mainVideo.currentTime}`
+        );
+        let setSrc = localStorage.setItem(
+          "src",
+          `${mainVideo.getAttribute("src")}`
+        );
+      });
+
+      window.addEventListener("load", () => {
+        let getDuration = localStorage.getItem("duration");
+        let getSrc = localStorage.getItem("src");
+        if (getSrc) {
+          mainVideo.src = getSrc;
+          mainVideo.currentTime = getDuration;
+        }
+      });
+
+      mainVideo.addEventListener("contextmenu", (e) => {
+        e.preventDefault();
+      });
+
+      // Mouse move controls
+      video_player.addEventListener("mouseover", () => {
+        controls.classList.add("active");
+      });
+
+      video_player.addEventListener("mouseleave", () => {
+        if (video_player.classList.contains("paused")) {
+          if (settingsBtn.classList.contains("active")) {
+            controls.classList.add("active");
+          } else {
+            controls.classList.remove("active");
+          }
+        } else {
+          controls.classList.add("active");
+        }
+      });
+
+      if (video_player.classList.contains("paused")) {
+        if (settingsBtn.classList.contains("active")) {
+          controls.classList.add("active");
+        } else {
+          controls.classList.remove("active");
+        }
+      } else {
+        controls.classList.add("active");
+      }
+
+      // mobile touch controls
+      video_player.addEventListener("touchstart", () => {
+        controls.classList.add("active");
+        setTimeout(() => {
+          controls.classList.remove("active");
+        }, 8000);
+      });
+
+      video_player.addEventListener("touchmove", () => {
+        if (video_player.classList.contains("paused")) {
+          controls.classList.remove("active");
+        } else {
+          controls.classList.add("active");
+        }
+      });
+    </script>
+  </body>
+</html>
