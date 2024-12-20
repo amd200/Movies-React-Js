@@ -13,7 +13,6 @@ function Banner({ myVideo }) {
   const dataMovie = useSelector((state) => state.movie);
   const [film, setFilm] = useState(null);
   const genres = film && film.genres.map((genre) => genre.name).join(", ");
-
   useEffect(() => {
     dispatch(getMovie(id));
   }, [dispatch, id]);
@@ -35,7 +34,7 @@ function Banner({ myVideo }) {
               <div className="content">
                 <div className="tailer d-flex align-items-end">
                   <button className="btn shadow-none border-0 d-flex align-items-center text-white " data-bs-toggle="modal" data-bs-target="#exampleModal">
-                    <IoPlayCircleOutline className="me-2 fs-1"/>
+                    <IoPlayCircleOutline className="me-2 fs-1" />
                     <span className="fs-4">Trailer</span>
                   </button>
                 </div>
@@ -47,8 +46,8 @@ function Banner({ myVideo }) {
                       {film.vote_average.toFixed(1)}
                     </li>
                     <li className="nav-item">{genres}</li>
-                    <li className="nav-item">2020</li>
-                    <li className="nav-item">1h 44min</li>
+                    <li className="nav-item">{new Date(film.release_date).getFullYear()}</li>
+                    <li className="nav-item">{Math.floor(film.runtime / 60)}h {film.runtime % 60}min</li>
                     <li className="nav-item">16+</li>
                   </ul>
                 </div>
@@ -67,7 +66,8 @@ function Banner({ myVideo }) {
               <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div className="modal-body">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/6WJc3PL9yYI?si=qK4h5Vifh0g1eGtY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>            </div>
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/6WJc3PL9yYI?si=qK4h5Vifh0g1eGtY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>{" "}
+            </div>
           </div>
         </div>
       </div>
