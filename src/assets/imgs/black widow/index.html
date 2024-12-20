@@ -5,79 +5,45 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- Bootstrap CSS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css"
-    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" />
     <script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>
 
     <link rel="stylesheet" href="style.css" />
     <!-- Link Swiper's CSS -->
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/swiper/swiper-bundle.min.css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Material+Icons"
-      rel="stylesheet"
-    />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet" />
     <title>Movierocket</title>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light p-3">
-      <div class="container">
-        <a class="navbar-brand" href="../index.html">
+    <nav className="navbar navbar-expand-lg navbar-light p-3">
+      <div className="container">
+        <a className="navbar-brand" href="../index.html">
           <img src="logo624.png" width="180" height="30" alt="" />
         </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
+        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span className="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link px-4" aria-current="page" href="#">Catalog</a>
+        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+            <li className="nav-item">
+              <a className="nav-link px-4" aria-current="page" href="#">Catalog</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link px-4" href="#">Pricing plans</a>
+            <li className="nav-item">
+              <a className="nav-link px-4" href="#">Pricing plans</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link px-4" href="#">About Us</a>
+            <li className="nav-item">
+              <a className="nav-link px-4" href="#">About Us</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link px-4" href="#">Contact</a>
+            <li className="nav-item">
+              <a className="nav-link px-4" href="#">Contact</a>
             </li>
           </ul>
-          <form action="" class="d-felx align-items-center">
-            <div class="input-group parent d-felx align-items-center">
-              <input
-                placeholder="I'm looking for..."
-                type="text"
-                class="form-control input border-0"
-                name=""
-                id=""
-              />
-              <svg
-                class="search"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M21.71,20.29,18,16.61A9,9,0,1,0,16.61,18l3.68,3.68a1,1,0,0,0,1.42,0A1,1,0,0,0,21.71,20.29ZM11,18a7,7,0,1,1,7-7A7,7,0,0,1,11,18Z"
-                ></path>
+          <form action="" className="d-felx align-items-center">
+            <div className="input-group parent d-felx align-items-center">
+              <input placeholder="I'm looking for..." type="text" className="form-control input border-0" name="" id="" />
+              <svg className="search" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M21.71,20.29,18,16.61A9,9,0,1,0,16.61,18l3.68,3.68a1,1,0,0,0,1.42,0A1,1,0,0,0,21.71,20.29ZM11,18a7,7,0,1,1,7-7A7,7,0,0,1,11,18Z"></path>
               </svg>
             </div>
           </form>
@@ -85,36 +51,25 @@
       </div>
     </nav>
 
-    <div class="banner">
-      <div class="container">
-        <div class="row">
-          <div class="col-12 col-xl-8">
-            <div class="content">
-              <div class="tailer d-flex align-items-end">
-                <a
-                  href="#"
-                  class="d-flex align-items-end text-white"
-                  data-bs-toggle="modal"
-                  data-bs-target="#exampleModal"
-                >
-                  <i class="bi bi-play-circle"></i>
+    <div className="banner">
+      <div className="container">
+        <div className="row">
+          <div className="col-12 col-xl-8">
+            <div className="content">
+              <div className="tailer d-flex align-items-end">
+                <a href="#" className="d-flex align-items-end text-white" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                  <i className="bi bi-play-circle"></i>
                   <p>Trailer</p>
                 </a>
               </div>
-              <div class="text">
-                <h3 class="fw-normal">Mortal</h3>
-                <ul class="d-flex p-0 align-items-center">
-                  <li class="nav-item">
-                    <i
-                      class="bi bi-star me-1"
-                      style="color: #2f80ed; font-size: 20px"
-                    ></i
-                    >9.0
-                  </li>
-                  <li class="nav-item">Action, Adventure, Drama</li>
-                  <li class="nav-item">2020</li>
-                  <li class="nav-item">1h 44min</li>
-                  <li class="nav-item">16+</li>
+              <div className="text">
+                <h3 className="fw-normal">Mortal</h3>
+                <ul className="d-flex p-0 align-items-center">
+                  <li className="nav-item"><i className="bi bi-star me-1" style="color: #2f80ed; font-size: 20px"></i>9.0</li>
+                  <li className="nav-item">Action, Adventure, Drama</li>
+                  <li className="nav-item">2020</li>
+                  <li className="nav-item">1h 44min</li>
+                  <li className="nav-item">16+</li>
                 </ul>
               </div>
             </div>
@@ -122,70 +77,65 @@
         </div>
       </div>
     </div>
-    <video
-     class="m-auto d-flex"
-    controls
-      src="https://enc109.vidboo.org:189/6jmnv5x5wuazsalriwlqh67vl4s5567s6gkdlxwd7p3g7kdg5qi56gbdmzmq/v.mp4"
-      
-    ></video>
-    <!-- <div class="video">
-      <div class="container">
+    <video className="m-auto d-flex" controls src="https://enc109.vidboo.org:189/6jmnv5x5wuazsalriwlqh67vl4s5567s6gkdlxwd7p3g7kdg5qi56gbdmzmq/v.mp4"></video>
+    <!-- <div className="video">
+      <div className="container">
         <div id="video_player">
-          <div class="jw-media jw-reset"></div>
+          <div className="jw-media jw-reset"></div>
 
-          <div class="progressAreaTime">0:00</div>
-          <div class="controls active">
-            <div class="progress-area">
-              <div class="progress-bar">
+          <div className="progressAreaTime">0:00</div>
+          <div className="controls active">
+            <div className="progress-area">
+              <div className="progress-bar">
                 <span></span>
               </div>
             </div>
-            <div class="controls-list">
-              <div class="controls-left">
-                <span class="icon">
-                  <i class="material-icons fast-rewind">replay_10</i>
+            <div className="controls-list">
+              <div className="controls-left">
+                <span className="icon">
+                  <i className="material-icons fast-rewind">replay_10</i>
                 </span>
-                <span class="icon">
-                  <i class="material-icons play_pause">play_arrow</i>
+                <span className="icon">
+                  <i className="material-icons play_pause">play_arrow</i>
                 </span>
-                <span class="icon">
-                  <i class="material-icons fast-forward">forward_10</i>
+                <span className="icon">
+                  <i className="material-icons fast-forward">forward_10</i>
                 </span>
-                <span class="icon">
-                  <i class="material-icons volume">volume_up</i>
-                  <input type="range" min="0" max="100" class="volume_range" />
+                <span className="icon">
+                  <i className="material-icons volume">volume_up</i>
+                  <input type="range" min="0" max="100" className="volume_range" />
                 </span>
-                <div class="timer">
-                  <span class="current">0:00</span> /
-                  <span class="duration">0 : 27</span>
+                <div className="timer">
+                  <span className="current">0:00</span> /
+                  <span className="duration">0 : 27</span>
                 </div>
               </div>
-              <div class="controls-right">
-                <span class="icon">
-                  <i class="material-icons auto-play"></i>
+              <div className="controls-right">
+                <span className="icon">
+                  <i className="material-icons auto-play"></i>
                 </span>
-                <span class="icon">
-                  <i class="material-icons settingsBtn">settings</i>
+                <span className="icon">
+                  <i className="material-icons settingsBtn">settings</i>
                 </span>
-                <span class="icon">
-                  <i class="material-icons picture_in_picutre"
+                <span className="icon">
+                  <i className="material-icons picture_in_picutre"
                     >picture_in_picture_alt</i
                   >
                 </span>
-                <span class="icon">
-                  <i class="material-icons fullscreen">fullscreen</i>
+                <span className="icon">
+                  <i className="material-icons fullscreen">fullscreen</i>
                 </span>
               </div>
             </div>
           </div>
           <div id="settings">
-            <div class="playback">
+            <div className="playback">
               <span>Playback Speed</span>
               <ul>
                 <li data-speed="0.25">0.25</li>
                 <li data-speed="0.5">0.5</li>
                 <li data-speed="0.75">0.75</li>
-                <li data-speed="1" class="active">Normal</li>
+                <li data-speed="1" className="active">Normal</li>
                 <li data-speed="1.25">1.25</li>
                 <li data-speed="1.5">1.5</li>
                 <li data-speed="1.75">1.75</li>
@@ -197,110 +147,81 @@
       </div>
     </div> -->
     <!-- Modal -->
-    <div
-      class="modal fade"
-      id="exampleModal"
-      tabindex="-1"
-      aria-labelledby="exampleModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Trailer</h5>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
+    <div className="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div className="modal-dialog">
+        <div className="modal-content">
+          <div className="modal-header">
+            <h5 className="modal-title" id="exampleModalLabel">Trailer</h5>
+            <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
-          <div class="modal-body">
-            <iframe
-              width="560"
-              height="315"
-              src="https://www.youtube.com/embed/IDMIIWdzE0s"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-            ></iframe>
+          <div className="modal-body">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/IDMIIWdzE0s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
         </div>
       </div>
     </div>
     <footer>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-4 col-md-5">
-            <div class="left">
-              <img
-                class="mb-2"
-                src="https://movierocket.000webhostapp.com/img/logo624.png"
-                width="200"
-                height="30"
-                alt=""
-              />
-              <p class="text-white">
+      <div className="container">
+        <div className="row">
+          <div className="col-lg-4 col-md-5">
+            <div className="left">
+              <img className="mb-2" src="https://movierocket.000webhostapp.com/img/logo624.png" width="200" height="30" alt="" />
+              <p className="text-white">
                 Movies & TV Shows, Online cinema <br />
                 Movie database PHP Template.
               </p>
             </div>
           </div>
-          <div class="col-lg-3 col-md-4">
-            <div class="frist">
-              <h6 class="text-white">Movierocket</h6>
-              <ul class="navbar-nav">
-                <li class="nav-item">
-                  <a href="#" class="nav-link p-0">About Us</a>
+          <div className="col-lg-3 col-md-4">
+            <div className="frist">
+              <h6 className="text-white">Movierocket</h6>
+              <ul className="navbar-nav">
+                <li className="nav-item">
+                  <a href="#" className="nav-link p-0">About Us</a>
                 </li>
-                <li class="nav-item">
-                  <a href="#" class="nav-link p-0">Contact Us</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4">
-            <div class="second">
-              <h6 class="text-white">Browse</h6>
-              <ul class="navbar-nav">
-                <li class="nav-item">
-                  <a href="#" class="nav-link p-0">Tv</a>
-                </li>
-
-                <li class="nav-item">
-                  <a href="#" class="nav-link p-0">Movies</a>
+                <li className="nav-item">
+                  <a href="#" className="nav-link p-0">Contact Us</a>
                 </li>
               </ul>
             </div>
           </div>
 
-          <div class="col-lg-2 col-md-4">
-            <div class="third">
-              <h6 class="text-white">Help</h6>
-              <ul class="navbar-nav">
-                <li class="nav-item">
-                  <a href="#" class="nav-link p-0">Plans & Pricing</a>
+          <div className="col-lg-3 col-md-4">
+            <div className="second">
+              <h6 className="text-white">Browse</h6>
+              <ul className="navbar-nav">
+                <li className="nav-item">
+                  <a href="#" className="nav-link p-0">Tv</a>
                 </li>
-                <li class="nav-item">
-                  <a href="#" class="nav-link p-0">Privacy policy</a>
+
+                <li className="nav-item">
+                  <a href="#" className="nav-link p-0">Movies</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="col-lg-2 col-md-4">
+            <div className="third">
+              <h6 className="text-white">Help</h6>
+              <ul className="navbar-nav">
+                <li className="nav-item">
+                  <a href="#" className="nav-link p-0">Plans & Pricing</a>
+                </li>
+                <li className="nav-item">
+                  <a href="#" className="nav-link p-0">Privacy policy</a>
                 </li>
               </ul>
             </div>
           </div>
         </div>
-        <div class="revsred">
+        <div className="revsred">
           <p>© Movierocket, 2022 : All Rights Reserved</p>
           <p>Developed by Ahmed Mohamed.</p>
         </div>
       </div>
     </footer>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <!-- Swiper JS -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
@@ -396,8 +317,7 @@
         let videoDuration = mainVideo.duration;
         let progressWidthval = progressArea.clientWidth;
         let ClickOffsetX = e.offsetX;
-        mainVideo.currentTime =
-          (ClickOffsetX / progressWidthval) * videoDuration;
+        mainVideo.currentTime = (ClickOffsetX / progressWidthval) * videoDuration;
       });
 
       // change volume
@@ -516,14 +436,8 @@
       // Store video duration and video path in local storage
 
       window.addEventListener("unload", () => {
-        let setDuration = localStorage.setItem(
-          "duration",
-          `${mainVideo.currentTime}`
-        );
-        let setSrc = localStorage.setItem(
-          "src",
-          `${mainVideo.getAttribute("src")}`
-        );
+        let setDuration = localStorage.setItem("duration", `${mainVideo.currentTime}`);
+        let setSrc = localStorage.setItem("src", `${mainVideo.getAttribute("src")}`);
       });
 
       window.addEventListener("load", () => {

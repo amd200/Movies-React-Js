@@ -2,11 +2,14 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./components/Header/Header";
 import Hero from "./pages/Hero";
 import Film from "./pages/Film";
-import "./App.css";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import Footer from "./components/Footer/Footer";
 import { useDispatch, useSelector } from "react-redux";
+import DetailsFilm from "./pages/DetailsFilm";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+import "./App.css";
 
 function App() {
   const [totalPages, setTotalPages] = useState(500);
@@ -26,7 +29,9 @@ function App() {
       <Header search={search} />
       <Routes>
         <Route path="/" element={<Hero totalPages={totalPages} />} />
-        <Route path="/film" element={<Film />} />
+        <Route path="/films" element={<Film />} />
+        <Route path="/film/:id" element={<DetailsFilm />} />
+
       </Routes>
       <Footer />
     </BrowserRouter>

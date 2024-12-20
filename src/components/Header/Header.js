@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { getAllMovies, searchMovies } from "../../redux/actions/MovieAction";
+import { NavLink } from "react-router-dom";
 
 function Header() {
   const dispatch = useDispatch();
@@ -15,23 +16,11 @@ function Header() {
   return (
     <nav className="navbar navbar-expand-lg navbar-light p-3">
       <div className="container">
-        <a className="navbar-brand" href="#">
-          <img
-            src={require("../../assets/imgs/logo624.png")}
-            width="180"
-            height="30"
-            alt=""
-          />
-        </a>
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
+        <NavLink className="navbar-brand" to="/">
+          <img src={require("../../assets/imgs/logo624.png")} width="180" height="30" alt="" />
+        </NavLink>
+
+        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
@@ -59,17 +48,8 @@ function Header() {
           </ul>
           <form className="d-felx align-items-center">
             <div className="input-group parent d-felx align-items-center">
-              <input
-                onChange={(e) => search(e.target.value)}
-                placeholder="I'm looking for..."
-                type="text"
-                className="form-control input border-0"
-              />
-              <svg
-                className="search"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-              >
+              <input onChange={(e) => search(e.target.value)} placeholder="I'm looking for..." type="text" className="form-control input border-0" />
+              <svg className="search" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                 <path d="M21.71,20.29,18,16.61A9,9,0,1,0,16.61,18l3.68,3.68a1,1,0,0,0,1.42,0A1,1,0,0,0,21.71,20.29ZM11,18a7,7,0,1,1,7-7A7,7,0,0,1,11,18Z"></path>
               </svg>
             </div>
