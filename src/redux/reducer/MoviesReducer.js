@@ -14,12 +14,14 @@ export const MoviesReducer = (state = initialData, action) => {
       type: action.type,
       movies: action.data,
       totalPages: action.totalPages,
+      loading: false,
     };
   } else if (action.type == Movie) {
     return {
       type: action.type,
       movie: action.data,
       totalPages: action.totalPages,
+      loading: false,
     };
   } else {
     return state;

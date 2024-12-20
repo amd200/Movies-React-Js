@@ -6,8 +6,6 @@ import { getPage } from "../../redux/actions/MovieAction";
 function PaginationMui() {
   const [pageCurrent, setPageCurrent] = useState(1);
   const dispatch = useDispatch();
-  const totalPages = useSelector((state) => state.totalPages);
-  console.log(totalPages);
   // get current page
   const handleChange = (event, value) => {
     setPageCurrent(value);
@@ -17,12 +15,7 @@ function PaginationMui() {
   }, [pageCurrent]);
   return (
     <Stack spacing={2} className="align-items-center mb-3">
-      <Pagination
-        count={totalPages}
-        page={pageCurrent}
-        color="primary"
-        onChange={handleChange}
-      />
+      <Pagination count={500} page={pageCurrent} color="primary" onChange={handleChange} />
     </Stack>
   );
 }
