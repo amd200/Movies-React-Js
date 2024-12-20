@@ -42,7 +42,7 @@ export const getMovie = (ID) => {
     dispatch({
       type: Movie,
       data: response.data,
-      totalPages: response.data.total_pages,
+      totalPages: 500,
     });
   };
 };
