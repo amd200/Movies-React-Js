@@ -67,8 +67,7 @@ function Banner({ myVideo }) {
               <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div className="modal-body">
-              <VideoFilm myVideo={myVideo} />
-            </div>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/6WJc3PL9yYI?si=qK4h5Vifh0g1eGtY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>            </div>
           </div>
         </div>
       </div>
