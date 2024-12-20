@@ -9,6 +9,7 @@ import DetailsFilm from "./pages/DetailsFilm";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import "./App.css";
+import { Analytics } from "@vercel/analytics/react"
 
 function App() {
   const [totalPages, setTotalPages] = useState(500);
@@ -25,6 +26,7 @@ function App() {
 
   return (
     <BrowserRouter>
+      <Analytics />
       <Header search={search} />
       <Routes>
         <Route path="/" element={<Hero totalPages={totalPages} />} />
