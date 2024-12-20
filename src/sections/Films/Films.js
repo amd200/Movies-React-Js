@@ -9,14 +9,16 @@ function Films() {
 
   const dispatch = useDispatch();
   const dataMovies = useSelector((state) => state.movies);
+  const loading = useSelector((state) => state.loading);
 
   useEffect(() => {
     dispatch(getAllMovies());
   }, []);
 
   useEffect(() => {
-    setFilms(dataMovies);
-    console.log(films);
+    if (dataMovies && dataMovies.length > 0 && loading === false) {
+      setFilms(dataMovies);
+    }
   }, [dataMovies]);
   return (
     <div className="films">

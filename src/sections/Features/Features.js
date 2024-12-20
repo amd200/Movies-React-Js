@@ -9,13 +9,14 @@ function Features({}) {
   const [films, setFilms] = useState([]);
   const dispatch = useDispatch();
   const dataMovies = useSelector((state) => state.movies);
+  const loading = useSelector((state) => state.loading);
 
   useEffect(() => {
     dispatch(getAllMovies());
   }, []);
 
   useEffect(() => {
-    if (dataMovies && dataMovies.length > 0) {
+    if (dataMovies && dataMovies.length > 0 && loading === false) {
       setFilms(dataMovies);
     }
   }, [dataMovies]);
