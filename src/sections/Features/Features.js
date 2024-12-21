@@ -13,7 +13,7 @@ function Features({}) {
 
   useEffect(() => {
     dispatch(getAllMovies());
-  }, []);
+  }, [dispatch]);
 
   useEffect(() => {
     if (dataMovies && dataMovies.length > 0 && loading === false) {
