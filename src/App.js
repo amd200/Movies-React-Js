@@ -26,11 +26,11 @@ function App() {
 
   return (
     <BrowserRouter>
-      <Analytics />
+      {/* <Analytics /> */}
       <Header search={search} />
       <Routes>
         <Route path="/" element={<Hero totalPages={totalPages} />} />
-        <Route path="/film/:id" element={<DetailsFilm />} />
+        <Route path="/movie/:id" element={<DetailsFilm />} />
       </Routes>
       <Footer />
     </BrowserRouter>

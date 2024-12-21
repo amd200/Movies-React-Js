@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
-import { getMovie } from "../../redux/actions/MovieAction";
+import { getMovie, getVideoMovie } from "../../redux/actions/MovieAction";
 import "./style.css";
 import { FaRegStar } from "react-icons/fa";
 import { IoPlayCircleOutline } from "react-icons/io5";
@@ -12,7 +12,7 @@ function Banner({ myVideo }) {
   const dispatch = useDispatch();
   const dataMovie = useSelector((state) => state.movie);
   const [film, setFilm] = useState(null);
-  const genres = film && film.genres.map((genre) => genre.name).join(", ");
+  const genres = film && film.genres.slice(0, 3).map((genre) => genre.name).join(" - ");
   useEffect(() => {
     dispatch(getMovie(id));
   }, [dispatch, id]);
@@ -27,7 +27,7 @@ function Banner({ myVideo }) {
   }
   return (
     <>
-      <div className="banner" style={{ backgroundImage: `url(https://image.tmdb.org/t/p/w500/${film.backdrop_path})` }}>
+      <div className="banner" style={{ backgroundImage: `url(https://image.tmdb.org/t/p/original${film.backdrop_path})` }}>
         <div className="container">
           <div className="row">
             <div className="col-12 col-xl-8">
@@ -47,8 +47,10 @@ function Banner({ myVideo }) {
                     </li>
                     <li className="nav-item">{genres}</li>
                     <li className="nav-item">{new Date(film.release_date).getFullYear()}</li>
-                    <li className="nav-item">{Math.floor(film.runtime / 60)}h {film.runtime % 60}min</li>
-                    <li className="nav-item">16+</li>
+                    <li className="nav-item">
+                      {Math.floor(film.runtime / 60)}h {film.runtime % 60}min
+                    </li>
+                    {/* <li className="nav-item">16+</li> */}
                   </ul>
                 </div>
               </div>
@@ -56,7 +58,7 @@ function Banner({ myVideo }) {
           </div>
         </div>
       </div>
-      <div className="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div className="modal fade" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div className="modal-dialog">
           <div className="modal-content">
             <div className="modal-header">
@@ -66,7 +68,7 @@ function Banner({ myVideo }) {
               <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div className="modal-body">
-              <iframe width="560" height="315" src="https://www.youtube.com/embed/6WJc3PL9yYI?si=qK4h5Vifh0g1eGtY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>{" "}
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/6WJc3PL9yYI?si=qK4h5Vifh0g1eGtY" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>{" "}
             </div>
           </div>
         </div>

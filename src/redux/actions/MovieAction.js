@@ -1,5 +1,5 @@
 import axios from "axios";
-import { AllMovies, Authorization, Movie, SearchMovies } from "../types/Movies";
+import { AllMovies, Authorization, Movie, SearchMovies, VideoMovie } from "../types/Movies";
 
 export const getAllMovies = (pageCurrent) => {
   return async (dispatch) => {
@@ -41,6 +41,16 @@ export const getMovie = (ID) => {
     const response = await axios.get(`https://api.themoviedb.org/3/movie/${ID}?language=en-US`, Authorization);
     dispatch({
       type: Movie,
+      data: response.data,
+      totalPages: 500,
+    });
+  };
+};
+export const getVideoMovie = (ID) => {
+  return async (dispatch) => {
+    const response = await axios.get(`https://api.themoviedb.org/3/movie/${ID}/videos?language=en-US`, Authorization);
+    dispatch({
+      type: VideoMovie,
       data: response.data,
       totalPages: 500,
     });

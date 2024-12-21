@@ -1,4 +1,5 @@
 export const AllMovies = "AllMovies";
+export const VideoMovie = "VideoMovie";
 export const Movie = "Movie";
 export const SearchMovies = "SearchMovies";
 

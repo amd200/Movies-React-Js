@@ -7,9 +7,7 @@ function DetailsFilm() {
   return (
     <>
       <Banner />
-      <div className="container">
-        <VideoFilm myVideo={myVideo} />
-      </div>
+      <VideoFilm myVideo={myVideo} />
     </>
   );
 }

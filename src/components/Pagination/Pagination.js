@@ -7,7 +7,6 @@ function PaginationMui() {
   const [pageCurrent, setPageCurrent] = useState(1);
   const dispatch = useDispatch();
   const totalPages = useSelector((state) => state.totalPages);
-  console.log(totalPages);
   // get current page
   const handleChange = (event, value) => {
     setPageCurrent(value);
